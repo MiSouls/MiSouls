@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-label="Miguel Henao - Desarrollador web">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0b0f"/>
+      <stop offset="1" stop-color="#1a0b12"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ff3b3b"/>
+      <stop offset="0.7" stop-color="#b3122a"/>
+      <stop offset="1" stop-color="#6e0a1a"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#e11d48" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#e11d48" stop-opacity="0"/>
+    </radialGradient>
+    <path id="crow" d="M0,0 Q9,-11 18,-1 Q27,-11 36,0 Q27,-4 18,5 Q9,-4 0,0Z"/>
+  </defs>
+  <style>
+    .halo { animation: pulse 4s ease-in-out infinite; transform-origin: 790px 120px; }
+    @keyframes pulse { 0%,100% { opacity: .55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
+    .c1 { animation: fly 14s linear infinite; }
+    .c2 { animation: fly 19s linear infinite -6s; }
+    .c3 { animation: fly 24s linear infinite -12s; }
+    @keyframes fly { from { transform: translateX(-80px); } to { transform: translateX(1100px); } }
+    .name { font: 700 52px 'Segoe UI', Arial, sans-serif; letter-spacing: 6px; fill: #f4f4f5; }
+    .role { font: 400 20px 'Courier New', monospace; letter-spacing: 3px; fill: #e11d48; }
+    .rise { animation: rise 1.4s ease-out both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+
+  <rect width="1000" height="260" fill="url(#bg)"/>
+
+  <circle class="halo" cx="790" cy="120" r="150" fill="url(#halo)"/>
+  <circle cx="790" cy="120" r="70" fill="url(#moon)"/>
+  <circle cx="812" cy="104" r="62" fill="#0b0b0f" opacity="0.0"/>
+
+  <g fill="#3a1220" stroke="#000" stroke-width="0.6" opacity="0.95">
+    <g class="c1"><use href="#crow" x="0" y="60"/></g>
+    <g class="c2"><use href="#crow" x="0" y="150" transform="scale(0.8)"/></g>
+    <g class="c3"><use href="#crow" x="0" y="200"/></g>
+  </g>
+
+  <rect x="60" y="150" width="90" height="3" fill="#e11d48"/>
+  <text class="name rise" x="60" y="130">MIGUEL HENAO</text>
+  <text class="role rise" x="60" y="190" style="animation-delay:.4s">DESARROLLADOR WEB · FRONT-END</text>
+</svg>
